@@ -16,12 +16,26 @@ author = 'Samuel B Powell'
 extensions = [
 	'myst_parser',
 	'sphinx.ext.githubpages',
+	'sphinx.ext.mathjax',
+	'sphinx_design',
+	'sphinx_togglebutton',
 	]
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
-myst_enable_extensions = ['colon_fence']
+numfig = True #number figures
+
+# -- Myst options ------------------------------------------------------------
+# https://myst-parser.readthedocs.io/en/latest/configuration.html
+
+myst_enable_extensions = [
+	'colon_fence',
+	#'dollarmath', #-- we can't use dollarmath because it interferes with custom tex macros
+	'deflist',
+	]
+myst_title_to_header = True
+myst_update_mathjax = False
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -33,4 +47,20 @@ html_title = "Your title"
 #html_favicon = "favicon.ico"
 html_theme_options = {
 	"home_page_in_toc": True,
+	"use_sidenotes": True,
+}
+
+# -- MathJax Options ---------------------------------------------------------
+
+mathjax3_config = {
+	'options': {'processHtmlClass': 'tex2jax_process|mathjax_process|math|output_area'},
+	'tex': {
+		'inlineMath': [['$','$'],['\\(','\\)']],
+		'macros': {
+			'RR': '\\mathbb{R}', # real numbers
+			'mat': ['\\mathbf{#1}',1], #matrix: bold, upright
+			'trans': '\\intercal', #transpose T
+			'units': ['\\ \\mathrm{\\left[#1\\right]}',1], #space, upright in []
+		},
+	}
 }
