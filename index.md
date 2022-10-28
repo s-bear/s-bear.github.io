@@ -8,11 +8,10 @@
 :maxdepth: 2
 :caption: Contents
 
-camera calibration
+projects/camera calibration/index
 :::
 
 
 # Indices and tables
 - [](genindex)
-- {ref}`modindex`
-- {ref}`search`
+- [](search)
