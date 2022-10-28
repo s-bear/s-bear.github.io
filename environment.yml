@@ -2,7 +2,8 @@ name: sphinx
 channels:
   - conda-forge
 dependencies:
-  - python=>3.10
   - sphinx
   - myst-parser
-  - sphinx-book-theme
+  - sphinx-book-theme=>0.3
+  - sphinx-design
+  - sphinx-togglebutton
