@@ -8,9 +8,9 @@
 :maxdepth: 2
 :caption: Contents
 
-projects/camera calibration/index
 :::
 
+%projects/camera calibration/index
 
 # Indices and tables
 - [](genindex)

@@ -3,7 +3,7 @@ title: Camera Spectral Calibration
 author: Samuel B Powell
 #contact: samuel.powell@uq.edu.au
 copyright: 2022, Samuel B Powell
-#orphan: true
+orphan: true
 ---
 
 This document describes a rigorous approach to estimating the relative spectral sensitivities of a
